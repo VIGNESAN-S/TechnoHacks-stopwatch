@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    font-family: Arial, sans-serif;
+}
+
+.timer-container {
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.clock-border {
+    position: relative;
+    display: inline-block;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: colorChange 10s linear infinite, colorChange 3s linear infinite;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ffffff;
+    padding: 8px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+
+@keyframes colorChange {
+    0% {
+        border-color: rgb(255, 0, 0);
+    }
+
+    33% {
+        border-color: rgb(0, 255, 0);
+    }
+
+    66% {
+        border-color: rgb(0, 0, 255);
+    }
+
+    100% {
+        border-color: rgb(255, 0, 0);
+    }
+}
